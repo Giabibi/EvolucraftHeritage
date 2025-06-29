@@ -4,7 +4,7 @@ import { convertPermissionToString } from "../utils/convert";
 
 export default {
     name: "help",
-    description: "Affiche des informations sur les commandes",
+    description: "Liste toutes les commandes disponibles",
     contexts: [
         Discord.InteractionContextType.BotDM,
         Discord.InteractionContextType.Guild,

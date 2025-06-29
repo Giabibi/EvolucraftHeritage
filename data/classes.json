@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Archer",
+        "type": "DPS",
+        "rarity": "Commun",
+        "emoji": "🏹"
+    },
+    {
+        "name": "Barde",
+        "type": "Heal",
+        "rarity": "Commun",
+        "emoji": "🎵"
+    },
+    {
+        "name": "Guerrier",
+        "type": "Tank",
+        "rarity": "Commun",
+        "emoji": "⚔️"
+    },
+    {
+        "name": "Mage",
+        "type": "DPS",
+        "rarity": "Commun",
+        "emoji": "🔮"
+    },
+    {
+        "name": "Illusionniste",
+        "type": "DPS",
+        "rarity": "Commun",
+        "emoji": "🎭"
+    },
+    {
+        "name": "Assassin",
+        "type": "DPS",
+        "rarity": "Rare",
+        "emoji": "🗡️"
+    },
+    {
+        "name": "Paladin",
+        "type": "Tank",
+        "rarity": "Rare",
+        "emoji": "🛡️"
+    },
+    {
+        "name": "Élémentaliste",
+        "type": "DPS",
+        "rarity": "Rare",
+        "emoji": "🌪️"
+    },
+    {
+        "name": "Chevalier des glaces",
+        "type": "Tank",
+        "rarity": "Rare",
+        "emoji": "❄️"
+    },
+    {
+        "name": "Chaman",
+        "type": "Heal",
+        "rarity": "Épique",
+        "emoji": "🐺"
+    },
+    {
+        "name": "Invocateur",
+        "type": "DPS",
+        "rarity": "Épique",
+        "emoji": "📜"
+    },
+    {
+        "name": "Moine",
+        "type": "Tank",
+        "rarity": "Épique",
+        "emoji": "🧘"
+    },
+    {
+        "name": "Faucheur",
+        "type": "DPS",
+        "rarity": "Épique",
+        "emoji": "⚰️"
+    },
+    {
+        "name": "Archimage",
+        "type": "DPS",
+        "rarity": "Épique",
+        "emoji": "🧙‍♂️"
+    },
+    {
+        "name": "Guerrier Dragon",
+        "type": "Tank",
+        "rarity": "Légendaire",
+        "emoji": "🐉"
+    },
+    {
+        "name": "Clerc",
+        "type": "Heal",
+        "rarity": "Légendaire",
+        "emoji": "✝️"
+    },
+    {
+        "name": "Artiste Martial",
+        "type": "Tank",
+        "rarity": "Légendaire",
+        "emoji": "🥋"
+    },
+    {
+        "name": "Artificier",
+        "type": "DPS",
+        "rarity": "Légendaire",
+        "emoji": "💣"
+    },
+    {
+        "name": "Samouraï",
+        "type": "DPS",
+        "rarity": "Légendaire",
+        "emoji": "🈴"
+    },
+    {
+        "name": "Chevalier de la mort",
+        "type": "DPS",
+        "rarity": "Mythique",
+        "emoji": "☠️"
+    }
+]

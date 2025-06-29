@@ -97,10 +97,9 @@ const convertPermissionToString = (
     }
     return "Inconnue";
 };
-const convertStringToJobString = (job: string): string => {
-    let newJob = job.capitalize();
-    if (newJob === "Maitredarmes") return "MaitreDArmes";
-    return newJob;
+const convertStringToClassString = (classe: string): string => {
+    let newClass = classe.capitalize();
+    return newClass;
 };
 const convertStringToDate = (
     dateString: string | undefined
@@ -281,7 +280,7 @@ const formatAnnonceTime = (annonce: Announcement): string => {
 export {
     convertOptionToSlashCommandOption,
     convertPermissionToString,
-    convertStringToJobString,
+    convertStringToClassString,
     convertStringToDate,
     convertStringToInterval,
     formatAnnonceContent,

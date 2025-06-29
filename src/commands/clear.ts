@@ -3,7 +3,7 @@ import { ClientWithCommands, Command } from "../types/discord";
 
 export default {
     name: "clear",
-    description: "Supprime des messages",
+    description: "Supprime un nombre de messages dans le salon",
     contexts: [
         Discord.InteractionContextType.Guild,
         Discord.InteractionContextType.PrivateChannel,

@@ -3,7 +3,7 @@ import { ClientWithCommands, Command } from "../types/discord";
 
 export default {
     name: "ping",
-    description: "Montre le ping du bot discord",
+    description: "Mesure le temps de réponse du bot",
     contexts: [
         Discord.InteractionContextType.BotDM,
         Discord.InteractionContextType.Guild,
