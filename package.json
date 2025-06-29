@@ -1,9 +1,10 @@
 {
-    "name": "discord_bot",
+    "name": "evolucraft_heritage",
     "version": "1.0.0",
-    "description": "This is a bot template for server commands.",
+    "description": "This is a evolucraft bot for server commands.",
     "scripts": {
-        "dev": "npx ts-node src/index.ts"
+        "dev": "npx ts-node src/index.ts",
+        "prisma": "npx prisma generate"
     },
     "author": "Giabibi",
     "license": "ISC",

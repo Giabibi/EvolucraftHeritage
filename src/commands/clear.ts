@@ -1,4 +1,4 @@
-import Discord from "discord.js";
+import Discord, { MessageFlags } from "discord.js";
 import { ClientWithCommands, Command } from "../types/discord";
 
 export default {
@@ -28,12 +28,14 @@ export default {
             return;
 
         // Get inputs variables
-        const inputAmount = interaction.options.get("quantité");
+        const commandInteraction =
+            interaction as Discord.ChatInputCommandInteraction;
+        const inputAmount = commandInteraction.options.get("quantité");
         if (!inputAmount) {
             interaction.reply({
                 content:
                     "⚠️ Merci de fournir la quantité de message à supprimer.",
-                ephemeral: true,
+                flags: MessageFlags.Ephemeral,
             });
             return;
         }
@@ -43,7 +45,7 @@ export default {
         if (amount < 0 || amount > 100) {
             interaction.reply({
                 content: `⚠️ La quantité (\`${amount}\`) de message à supprimer n'est pas comprise entre \`0\` et \`100\``,
-                ephemeral: true,
+                flags: MessageFlags.Ephemeral,
             });
             return;
         }
@@ -55,7 +57,7 @@ export default {
 
             await interaction.reply({
                 content: `✅ J'ai bien supprimé \`${messages.size}\` message(s) dans ce salon !`,
-                ephemeral: true,
+                flags: MessageFlags.Ephemeral,
             });
         } catch (err) {
             // Get messages created before (14 days)
@@ -73,19 +75,27 @@ export default {
             if (messages.length <= 0) {
                 interaction.reply({
                     content: `✅ Aucun message à supprimer car ils datent tous de plus de 14 jours.`,
-                    ephemeral: true,
+                    flags: MessageFlags.Ephemeral,
                 });
                 return;
             }
 
             // Delete remaining messages
-            await channel.bulkDelete(messages);
+            try {
+                await channel.bulkDelete(messages);
 
-            // Reply with success message
-            await interaction.reply({
-                content: `✅ J'ai pu supprimé uniquement \`${messages.length}\` message(s) dans ce salon car les autres dataient de plus de 14 jours.`,
-                ephemeral: true,
-            });
+                // Reply with success message
+                await interaction.reply({
+                    content: `✅ J'ai pu supprimé uniquement \`${messages.length}\` message(s) dans ce salon car les autres dataient de plus de 14 jours.`,
+                    flags: MessageFlags.Ephemeral,
+                });
+            } catch (_) {
+                // Reply with error message
+                await interaction.reply({
+                    content: `⚠️ Je n'ai pas la permission d'effacer des messages.`,
+                    flags: MessageFlags.Ephemeral,
+                });
+            }
         }
     },
 } as Command;

@@ -12,4 +12,16 @@ model Guilds {
   id                Int           @id @default(autoincrement())
   guildId           String        @unique
   annonceChannelId  String?
+  announcements     Announcements[]
+}
+
+model Announcements {
+  id                Int           @id @default(autoincrement())
+  guildId           Int
+  name              String
+  content           String        @db.Text
+  date              DateTime?
+  timeInterval      BigInt?
+
+  guild Guilds @relation(fields: [guildId], references: [id], onDelete: Cascade)
 }

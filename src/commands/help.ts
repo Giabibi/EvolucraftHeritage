@@ -1,4 +1,4 @@
-import Discord from "discord.js";
+import Discord, { MessageFlags } from "discord.js";
 import { ClientWithCommands, Command } from "../types/discord";
 import { convertPermissionToString } from "../utils/convert";
 
@@ -54,14 +54,18 @@ export default {
             return;
 
         let command: Command | undefined;
-        if (interaction.options.get("commande")) {
+        const commandInteraction =
+            interaction as Discord.ChatInputCommandInteraction;
+        if (commandInteraction.options.get("commande")) {
             command = bot.commands.get(
-                (interaction.options.get("commande")?.value ?? "").toString()
+                (
+                    commandInteraction.options.get("commande")?.value ?? ""
+                ).toString()
             );
             if (!command) {
                 interaction.reply({
                     content: "⚠️ Commande inconnue.",
-                    ephemeral: true,
+                    flags: MessageFlags.Ephemeral,
                 });
                 return;
             }
@@ -95,7 +99,10 @@ export default {
                 });
             });
 
-            await interaction.reply({ embeds: [embed], ephemeral: true });
+            await interaction.reply({
+                embeds: [embed],
+                flags: MessageFlags.Ephemeral,
+            });
         } else {
             let embed = new Discord.EmbedBuilder()
                 .setColor(bot.color)
@@ -121,7 +128,10 @@ export default {
                 .setTimestamp()
                 .setFooter({ text: "Commandes du bot" });
 
-            await interaction.reply({ embeds: [embed], ephemeral: true });
+            await interaction.reply({
+                embeds: [embed],
+                flags: MessageFlags.Ephemeral,
+            });
         }
     },
 } as Command;

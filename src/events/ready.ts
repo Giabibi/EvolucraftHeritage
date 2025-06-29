@@ -5,11 +5,12 @@ import Discord from "discord.js";
 
 export default async (bot: ClientWithCommands) => {
     await loadCommands(bot);
-    await loadRegularsMessages(bot);
+    // await loadRegularsMessages(bot);
 
     bot.user?.setStatus(Discord.PresenceUpdateStatus.DoNotDisturb);
     const currentActivity: Discord.ActivityOptions = {
-        name: "Work",
+        name: "Evolucraft",
+        url: "https://evolucraft.fr/",
         type: Discord.ActivityType.Playing,
     };
     bot.user?.setActivity(currentActivity);

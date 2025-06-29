@@ -1,4 +1,4 @@
-import Discord from "discord.js";
+import Discord, { MessageFlags } from "discord.js";
 import { ClientWithCommands, Command } from "../types/discord";
 
 export default {
@@ -19,7 +19,7 @@ export default {
         if (interaction.type === Discord.InteractionType.ApplicationCommand) {
             await interaction.reply({
                 content: `Ping : \`${bot.ws.ping}\``,
-                ephemeral: true,
+                flags: MessageFlags.Ephemeral,
             });
         }
     },
