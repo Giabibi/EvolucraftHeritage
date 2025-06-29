@@ -1,0 +1,22 @@
+{
+    "name": "discord_bot",
+    "version": "1.0.0",
+    "description": "This is a bot template for server commands.",
+    "scripts": {
+        "dev": "npx ts-node src/index.ts"
+    },
+    "author": "Giabibi",
+    "license": "ISC",
+    "dependencies": {
+        "@prisma/client": "^5.22.0",
+        "discord.js": "^14.16.3",
+        "dotenv": "^16.4.5",
+        "fs": "^0.0.1-security",
+        "prisma": "^5.22.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.9.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.3"
+    }
+}
