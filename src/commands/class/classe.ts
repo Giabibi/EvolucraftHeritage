@@ -34,7 +34,7 @@ const handleClassOption = async (
         .setDescription(
             `
                 Nom : \`${classe.name}\`
-                Description : \`${"__description__"}\`
+                Description : \`${classe.description}\`
                 Type : \`${classTypes[classe.type]}\`
                 Rarity : \`${rarityColors[classe.rarity]}\`
             `

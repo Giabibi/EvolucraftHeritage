@@ -6,6 +6,7 @@ import {
     Class,
     EClass,
     EClassRarity,
+    getClasses,
 } from "../../types/evolucraft/classes";
 import rawClasses from "../../../data/classes.json";
 
@@ -27,16 +28,8 @@ const handleTypeOption = async (
     }
     const targetType = typeFilter as EClassType;
 
-    // Filtrage des classes par type
-    const classesData: Class[] = rawClasses.map((entry) => ({
-        name: Object.values(EClass).find((v) => v === entry.name)!,
-        type: EClassType[entry.type as keyof typeof EClassType],
-        rarity: EClassRarity[entry.rarity as keyof typeof EClassRarity],
-        emoji: entry.emoji,
-    }));
-
     // Filtrage par rareté
-    const filteredClasses = classesData.filter(
+    const filteredClasses = getClasses().filter(
         (cls) => cls.type === targetType
     );
 

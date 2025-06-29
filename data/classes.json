@@ -1,120 +1,140 @@
 [
     {
         "name": "Archer",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Commun",
         "emoji": "🏹"
     },
     {
         "name": "Barde",
+        "description": "__description__",
         "type": "Heal",
         "rarity": "Commun",
         "emoji": "🎵"
     },
     {
         "name": "Guerrier",
+        "description": "__description__",
         "type": "Tank",
         "rarity": "Commun",
         "emoji": "⚔️"
     },
     {
         "name": "Mage",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Commun",
         "emoji": "🔮"
     },
     {
         "name": "Illusionniste",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Commun",
         "emoji": "🎭"
     },
     {
         "name": "Assassin",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Rare",
         "emoji": "🗡️"
     },
     {
         "name": "Paladin",
+        "description": "__description__",
         "type": "Tank",
         "rarity": "Rare",
         "emoji": "🛡️"
     },
     {
         "name": "Élémentaliste",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Rare",
         "emoji": "🌪️"
     },
     {
         "name": "Chevalier des glaces",
+        "description": "__description__",
         "type": "Tank",
         "rarity": "Rare",
         "emoji": "❄️"
     },
     {
         "name": "Chaman",
+        "description": "__description__",
         "type": "Heal",
         "rarity": "Épique",
         "emoji": "🐺"
     },
     {
         "name": "Invocateur",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Épique",
         "emoji": "📜"
     },
     {
         "name": "Moine",
+        "description": "__description__",
         "type": "Tank",
         "rarity": "Épique",
         "emoji": "🧘"
     },
     {
         "name": "Faucheur",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Épique",
         "emoji": "⚰️"
     },
     {
         "name": "Archimage",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Épique",
         "emoji": "🧙‍♂️"
     },
     {
         "name": "Guerrier Dragon",
+        "description": "__description__",
         "type": "Tank",
         "rarity": "Légendaire",
         "emoji": "🐉"
     },
     {
         "name": "Clerc",
+        "description": "__description__",
         "type": "Heal",
         "rarity": "Légendaire",
         "emoji": "✝️"
     },
     {
         "name": "Artiste Martial",
+        "description": "__description__",
         "type": "Tank",
         "rarity": "Légendaire",
         "emoji": "🥋"
     },
     {
         "name": "Artificier",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Légendaire",
         "emoji": "💣"
     },
     {
         "name": "Samouraï",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Légendaire",
         "emoji": "🈴"
     },
     {
         "name": "Chevalier de la mort",
+        "description": "__description__",
         "type": "DPS",
         "rarity": "Mythique",
         "emoji": "☠️"

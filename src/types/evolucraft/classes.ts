@@ -37,6 +37,7 @@ enum EClassRarity {
 
 interface Class {
     name: EClass;
+    description: string;
     type: EClassType;
     rarity: EClassRarity;
     emoji: string;
@@ -54,10 +55,30 @@ const getClassByEClass = (classe: EClass): Class => {
 
     return {
         name: classe,
+        description: entry.description,
         type: EClassType[entry.type as keyof typeof EClassType],
         rarity: EClassRarity[entry.rarity as keyof typeof EClassRarity],
         emoji: entry.emoji,
     };
 };
+const getClasses = (): Class[] => {
+    return classesData.map((classe) => {
+        return {
+            name: classe.name,
+            description: classe.description,
+            type: EClassType[classe.type as keyof typeof EClassType],
+            rarity: EClassRarity[classe.rarity as keyof typeof EClassRarity],
+            emoji: classe.emoji,
+        } as Class;
+    });
+};
 
-export { Class, EClass, EClassType, EClassRarity, isEClass, getClassByEClass };
+export {
+    Class,
+    EClass,
+    EClassType,
+    EClassRarity,
+    isEClass,
+    getClassByEClass,
+    getClasses,
+};
