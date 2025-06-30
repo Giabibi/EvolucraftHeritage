@@ -1,0 +1,100 @@
+[
+    {
+        "name": "Commun",
+        "minLevel": 1,
+        "maxPlayers": 4,
+        "portalColor": "🟢 Vert",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584280652906666/image.png?ex=6862d4e3&is=68618363&hm=b88b270f0976a7e94a10c204933f344fb514eeaedeff4e10529145a1446d66ce&=&format=webp&quality=lossless&width=1716&height=902"
+    },
+    {
+        "name": "Rare",
+        "minLevel": 10,
+        "maxPlayers": 4,
+        "portalColor": "🟠 Orange",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584321018761378/image.png?ex=6862d4ec&is=6861836c&hm=119bdbe8735209fe0015542af51d920cff8188e41cf535c090312e16c6fb0afe&=&format=webp&quality=lossless&width=1716&height=902"
+    },
+    {
+        "name": "Épique",
+        "minLevel": 25,
+        "maxPlayers": 4,
+        "portalColor": "🔵 Bleu",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584416812470283/image.png?ex=6862d503&is=68618383&hm=3dd51ebec7ee1241c41d468e5e389b99ced05f2567127b746493c7ed6c9a1fee&=&format=webp&quality=lossless"
+    },
+    {
+        "name": "Légendaire",
+        "minLevel": 40,
+        "maxPlayers": 4,
+        "portalColor": "🟣 Violet",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584454267867246/image.png?ex=6862d50c&is=6861838c&hm=c89aba32689c82098e471d2104d293f4ce444164ddfb4abc00c417e11ebb8ed6&=&format=webp&quality=lossless"
+    },
+    {
+        "name": "Mythique",
+        "minLevel": 50,
+        "maxPlayers": 10,
+        "portalColor": "⚫ Noir",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584527131185242/image.png?ex=68637ddd&is=68622c5d&hm=e3a4ccca06995dba74acb0636ecb39d6caabbb1926a30ed1cb9fdc01fba4d96f&=&format=webp&quality=lossless"
+    },
+    {
+        "name": "Draconique",
+        "minLevel": 10,
+        "maxPlayers": 10,
+        "portalColor": "🔴 Rouge",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584560580759612/image.png?ex=68637de5&is=68622c65&hm=167e2e4d0c11d3b32da22c95a4ee9f9a2de492f3c69f747e7b25e1f70da1ec9e&=&format=webp&quality=lossless&width=1716&height=902"
+    },
+    {
+        "name": "Abyssal",
+        "minLevel": 10,
+        "maxPlayers": 4,
+        "portalColor": "🩵 Bleu clair",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584597117472891/image.png?ex=68637dee&is=68622c6e&hm=0530f3a2374d251f6cbc12f0cafa43e73ae6f72550e2475bbd4934b32aa68392&=&format=webp&quality=lossless&width=1716&height=902"
+    },
+    {
+        "name": "Halloween",
+        "minLevel": 20,
+        "maxPlayers": 4,
+        "portalColor": "🟠🟢 Orange et Vert",
+        "imgUrl": "https://cdn.discordapp.com/attachments/1388584209173713048/1388584634454900766/image.png?ex=68637df7&is=68622c77&hm=5736242f996e055f309b16085dec1e4937ee20997e1815517e46550c0ec8bcb1"
+    },
+    {
+        "name": "Givré Commun",
+        "minLevel": 15,
+        "maxPlayers": 2,
+        "portalColor": "🩵 Bleu clair (🍬 Avec des sucres d'orge)",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584665681756160/image.png?ex=68637dfe&is=68622c7e&hm=d20f5899660b611dd0d54927a37a45744094d62f2a8dc35e8dbf99a7a709b038&=&format=webp&quality=lossless&width=1716&height=902"
+    },
+    {
+        "name": "Givré Épique",
+        "minLevel": 40,
+        "maxPlayers": 2,
+        "portalColor": "🔵 Bleu (🍬 Avec des sucres d'orge)",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584708308209815/image.png?ex=68637e09&is=68622c89&hm=52e14297c262e4974bcece341047eab70603b79173f08dacd8a8cc075795b04a&=&format=webp&quality=lossless&width=1716&height=902"
+    },
+    {
+        "name": "Amour",
+        "minLevel": 10,
+        "maxPlayers": 4,
+        "portalColor": "🩷🟣 Rose et Violet",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584748137582712/image.png?ex=68637e12&is=68622c92&hm=7acd25800872add16d926b2a022eac16644e08ed0e9844fccdd231f003f2623b&=&format=webp&quality=lossless&width=1716&height=902"
+    },
+    {
+        "name": "Cupidon",
+        "minLevel": 40,
+        "maxPlayers": 8,
+        "portalColor": "🩷🟣 Rose et Violet",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584782992244817/image.png?ex=68637e1a&is=68622c9a&hm=0f4badecf89e88a8f7dc80786772bde9d6a3b0583be087a6fe5b3dda9c1d67b0&=&format=webp&quality=lossless&width=1716&height=902"
+    },
+    {
+        "name": "Terrier du Roi Lapin",
+        "minLevel": 15,
+        "maxPlayers": 4,
+        "portalColor": "🏳️‍🌈 Multicolor (🌲 Dans une souche d'arbre)",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584815363625101/image.png?ex=68637e22&is=68622ca2&hm=bcbbd04071c31bcb2c6299ee25a2ea7476cf7ad3256541114bd1a835ec2ee460&=&format=webp&quality=lossless&width=1716&height=902"
+    },
+    {
+        "name": "Fabrique de Chocolat",
+        "minLevel": 40,
+        "maxPlayers": 4,
+        "portalColor": "🩷 Rose",
+        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584850319216652/image.png?ex=68637e2a&is=68622caa&hm=a1869ee0d19e07beecfb2be3ceae7c1fe5416b9d9431d9ca24b562f03d2815c8&=&format=webp&quality=lossless&width=1716&height=902"
+    }
+]
