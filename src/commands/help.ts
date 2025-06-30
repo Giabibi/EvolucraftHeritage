@@ -34,15 +34,36 @@ export default {
             return;
 
         const entry = interaction.options.getFocused();
-        const choices = bot.commands.filter((command) =>
-            command.name.toLowerCase().includes(entry.toLowerCase())
-        );
+        try {
+            const member = interaction.member as Discord.GuildMember;
+            const choices = bot.commands.filter(
+                (command) =>
+                    command.name.toLowerCase().includes(entry.toLowerCase()) &&
+                    (command.permission
+                        ? member.permissions.has(
+                              command.permission as Discord.PermissionResolvable
+                          )
+                        : true)
+            );
 
-        await interaction.respond(
-            (entry === "" ? bot.commands : choices)
-                .map((command) => ({ name: command.name, value: command.name }))
-                .sort((a, b) => a.name.localeCompare(b.name))
-        );
+            await interaction.respond(
+                choices
+                    .map((command) => ({
+                        name: command.name,
+                        value: command.name,
+                    }))
+                    .sort((a, b) => a.name.localeCompare(b.name))
+            );
+        } catch (_) {
+            await interaction.respond(
+                bot.commands
+                    .map((command) => ({
+                        name: command.name,
+                        value: command.name,
+                    }))
+                    .sort((a, b) => a.name.localeCompare(b.name))
+            );
+        }
     },
 
     async run(
@@ -87,22 +108,64 @@ export default {
                 .setTimestamp()
                 .setFooter({ text: "Commandes du bot" });
 
-            await categories.sort().forEach(async (category) => {
-                let commands = bot.commands.filter(
-                    (c) => c.category === category
-                );
-                embed.addFields({
-                    name: `${category}`,
-                    value: commands
-                        .map((c) => `\`${c.name}\` : ${c.description}`)
-                        .join("\n"),
-                });
-            });
+            try {
+                if (!(interaction.member instanceof Discord.GuildMember))
+                    throw Error(
+                        "This is not a guild message, so no user permission."
+                    );
+                const member = interaction.member as Discord.GuildMember;
 
-            await interaction.reply({
-                embeds: [embed],
-                flags: MessageFlags.Ephemeral,
-            });
+                let commandsAmount = 0;
+                let categoriesAmount = 0;
+
+                categories.sort().forEach((category) => {
+                    let commands = bot.commands.filter(
+                        (c) =>
+                            c.category === category &&
+                            (c.permission
+                                ? member.permissions.has(
+                                      c.permission as Discord.PermissionResolvable
+                                  )
+                                : true)
+                    );
+                    if (commands.size > 0) {
+                        commandsAmount += commands.size;
+                        categoriesAmount += 1;
+                        embed.addFields({
+                            name: `${category}`,
+                            value: commands
+                                .map((c) => `\`${c.name}\` : ${c.description}`)
+                                .join("\n"),
+                        });
+                    }
+                });
+
+                embed.setDescription(
+                    `Commandes disponibles : \`${commandsAmount}\`\nCatégories disponibles : \`${categoriesAmount}\``
+                );
+
+                await interaction.reply({
+                    embeds: [embed],
+                    flags: MessageFlags.Ephemeral,
+                });
+            } catch (_) {
+                categories.sort().forEach((category) => {
+                    let commands = bot.commands.filter(
+                        (c) => c.category === category
+                    );
+                    embed.addFields({
+                        name: `${category}`,
+                        value: commands
+                            .map((c) => `\`${c.name}\` : ${c.description}`)
+                            .join("\n"),
+                    });
+                });
+
+                await interaction.reply({
+                    embeds: [embed],
+                    flags: MessageFlags.Ephemeral,
+                });
+            }
         } else {
             let embed = new Discord.EmbedBuilder()
                 .setColor(bot.color)

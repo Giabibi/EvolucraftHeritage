@@ -120,7 +120,7 @@ export default {
             interaction.reply({
                 content:
                     "⚠️ Vous ne pouvez utiliser qu'un seul filtre à la fois (classe, type ou rareté).",
-                ephemeral: true,
+                flags: MessageFlags.Ephemeral,
             });
             return;
         }
