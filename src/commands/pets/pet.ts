@@ -24,7 +24,6 @@ const handlePetOption = async (
     const embed = new Discord.EmbedBuilder()
         .setColor(bot.color)
         .setTitle(`Donjon ${pet.name}`)
-        .setThumbnail(bot.user?.displayAvatarURL()!)
         .setDescription(
             `
                 Nom : \`${pet.name}\`

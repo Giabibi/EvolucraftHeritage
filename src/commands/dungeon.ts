@@ -80,7 +80,6 @@ export default {
             const embed = new Discord.EmbedBuilder()
                 .setColor(bot.color)
                 .setTitle(`Liste des donjons Evolucraft`)
-                .setThumbnail(bot.user?.displayAvatarURL()!)
                 .setDescription(
                     `Voici tous les donjons disponibles dans Évolucraft.`
                 )

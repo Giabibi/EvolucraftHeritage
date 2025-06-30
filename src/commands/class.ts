@@ -135,7 +135,6 @@ export default {
             const embed = new Discord.EmbedBuilder()
                 .setColor(bot.color)
                 .setTitle(`Liste des classes Evolucraft`)
-                .setThumbnail(bot.user?.displayAvatarURL()!)
                 .setDescription(
                     `Voici toutes les classes disponibles dans Évolucraft.`
                 )

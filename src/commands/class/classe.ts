@@ -30,7 +30,6 @@ const handleClassOption = async (
     const embed = new Discord.EmbedBuilder()
         .setColor(ERarityColor[classe.rarity])
         .setTitle(`Classe ${classe.name}`)
-        .setThumbnail(bot.user?.displayAvatarURL()!)
         .setDescription(
             `
                 Nom : \`${classe.name}\`

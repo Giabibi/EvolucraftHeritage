@@ -44,7 +44,6 @@ const handleTypeOption = async (
     const embed = new Discord.EmbedBuilder()
         .setColor(bot.color)
         .setTitle(`Classes de type ${classTypes[targetType]}`)
-        .setThumbnail(bot.user?.displayAvatarURL()!)
         .setDescription(
             `Voici toutes les classes du type \`${classTypes[targetType]}\`.`
         )

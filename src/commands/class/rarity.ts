@@ -46,7 +46,6 @@ const handleRarityOption = async (
     const embed = new Discord.EmbedBuilder()
         .setColor(ERarityColor[targetRarity])
         .setTitle(`Classes de rareté ${rarityFilter}`)
-        .setThumbnail(bot.user?.displayAvatarURL()!)
         .setDescription(
             `Voici toutes les classes de rareté \`${rarityFilter}\`.`
         )

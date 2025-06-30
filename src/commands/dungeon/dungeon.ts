@@ -28,7 +28,6 @@ const handleDungeonOption = async (
     const embed = new Discord.EmbedBuilder()
         .setColor(bot.color)
         .setTitle(`Donjon ${dungeon.name}`)
-        .setThumbnail(bot.user?.displayAvatarURL()!)
         .setDescription(
             `
                 Nom : \`${dungeon.name}\`
