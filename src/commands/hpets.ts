@@ -67,6 +67,36 @@ export default {
                 },
             ],
         },
+        {
+            type: Discord.ApplicationCommandOptionType.Subcommand,
+            name: "update",
+            description: "Modifie le niveau d'un pet heritage",
+            options: [
+                {
+                    type: Discord.ApplicationCommandOptionType.String,
+                    name: "name",
+                    description: "Nom du pet à modifier",
+                    required: true,
+                    autocomplete: true,
+                },
+                {
+                    type: Discord.ApplicationCommandOptionType.Integer,
+                    name: "old_level",
+                    description: "Niveau actuel du pet",
+                    required: true,
+                    minValue: 1,
+                    maxValue: 20,
+                },
+                {
+                    type: Discord.ApplicationCommandOptionType.Integer,
+                    name: "new_level",
+                    description: "Nouveau niveau du pet",
+                    required: true,
+                    minValue: 1,
+                    maxValue: 20,
+                },
+            ],
+        },
     ],
 
     async autocomplete(
@@ -80,14 +110,21 @@ export default {
         )
             return;
 
+        const subcommandName = interaction.options.getSubcommand(true);
         const focused = interaction.options.getFocused(true);
         const value = focused.value.toLowerCase();
 
         if (focused.name === "name") {
-            const filtered = Object.values(EPet).filter((pet) =>
-                pet.toLowerCase().includes(value)
-            );
-
+            let filtered: EPet[];
+            if (["remove", "update"].includes(subcommandName)) {
+                filtered = heritagePetsData
+                    .map((pet) => pet.name as EPet)
+                    .filter((pet) => pet.toLowerCase().includes(value));
+            } else {
+                filtered = Object.values(EPet).filter((pet) =>
+                    pet.toLowerCase().includes(value)
+                );
+            }
             await interaction.respond(
                 filtered
                     .sort()
@@ -115,7 +152,7 @@ export default {
             member.roles.cache.has(HERITAGE_ROLE_ID) ||
             member.permissions.has(Discord.PermissionFlagsBits.Administrator);
 
-        if (["add", "remove"].includes(subcommand) && !isAuthorized) {
+        if (["add", "remove", "update"].includes(subcommand) && !isAuthorized) {
             await interaction.reply({
                 content:
                     "⛔ Tu n'as pas la permission d'utiliser cette commande.",
@@ -181,6 +218,38 @@ export default {
 
             await interaction.reply({
                 content: `✅ Le pet **${name}** (Niveau ${level}) a été supprimé.`,
+                flags: MessageFlags.Ephemeral,
+            });
+        }
+
+        if (subcommand === "update") {
+            const name = commandInteraction.options.getString("name", true);
+            const oldLevel = commandInteraction.options.getInteger(
+                "old_level",
+                true
+            );
+            const newLevel = commandInteraction.options.getInteger(
+                "new_level",
+                true
+            );
+
+            const index = heritagePetsData.findIndex(
+                (pet) => pet.name === name && pet.level === oldLevel
+            );
+
+            if (index === -1) {
+                await interaction.reply({
+                    content: `❌ Aucun pet nommé **${name}** au niveau ${oldLevel} n'a été trouvé.`,
+                    flags: MessageFlags.Ephemeral,
+                });
+                return;
+            }
+
+            heritagePetsData[index].level = newLevel;
+            saveHeritagePets(heritagePetsData);
+
+            await interaction.reply({
+                content: `✅ Le niveau du pet **${name}** a été mis à jour de ${oldLevel} ➜ ${newLevel}.`,
                 flags: MessageFlags.Ephemeral,
             });
         }
