@@ -16,6 +16,8 @@ export default {
             name: "quantité",
             description: "Le nombre de message à supprimer",
             required: true,
+            minValue: 1,
+            maxValue: 100,
         },
     ],
 
@@ -30,26 +32,8 @@ export default {
         // Get inputs variables
         const commandInteraction =
             interaction as Discord.ChatInputCommandInteraction;
-        const inputAmount = commandInteraction.options.get("quantité");
-        if (!inputAmount) {
-            interaction.reply({
-                content:
-                    "⚠️ Merci de fournir la quantité de message à supprimer.",
-                flags: MessageFlags.Ephemeral,
-            });
-            return;
-        }
+        const inputAmount = commandInteraction.options.get("quantité", true);
         const amount = inputAmount.value as number;
-
-        // Check if the amount is possible
-        if (amount < 0 || amount > 100) {
-            interaction.reply({
-                content: `⚠️ La quantité (\`${amount}\`) de message à supprimer n'est pas comprise entre \`0\` et \`100\``,
-                flags: MessageFlags.Ephemeral,
-            });
-            return;
-        }
-
         const channel = interaction.channel as Discord.TextChannel;
         try {
             // Delete messages

@@ -3,7 +3,6 @@ import Discord, {
     ButtonBuilder,
     ButtonStyle,
     ComponentType,
-    DiscordAPIError,
     EmbedBuilder,
     MessageFlags,
 } from "discord.js";
@@ -15,7 +14,11 @@ import { EPet } from "../types/evolucraft/pets";
 export default {
     name: "pets",
     description: "Affiche les pets de la guilde",
-    contexts: [Discord.InteractionContextType.Guild],
+    contexts: [
+        Discord.InteractionContextType.BotDM,
+        Discord.InteractionContextType.Guild,
+        Discord.InteractionContextType.PrivateChannel,
+    ],
     permission: null,
     category: "Evolucraft",
     options: [
@@ -80,32 +83,6 @@ export default {
         if (selectedPet) {
             handlePetOption(bot, interaction, selectedPet);
         } else {
-            // const embed = new Discord.EmbedBuilder()
-            //     .setColor(bot.color)
-            //     .setTitle(`Liste des pets Evolucraft`)
-            //     .setThumbnail(bot.user?.displayAvatarURL()!)
-            //     .setDescription(
-            //         `Voici tous les pets disponibles dans Évolucraft.`
-            //     )
-            //     .setTimestamp()
-            //     .setFooter({ text: "Pets de Évolucraft" });
-
-            // let count = 0;
-            // for (const pet of petsData) {
-            //     embed.addFields({
-            //         name: `${pet.name}`,
-            //         value: `Rarity: ${pet.rarity}`,
-            //         inline: true,
-            //     });
-            //     count += 1;
-            //     if (count > 20) break;
-            // }
-
-            // await interaction.reply({
-            //     embeds: [embed],
-            //     flags: MessageFlags.Ephemeral,
-            // });
-
             const PAGE_SIZE = 18;
             const pages: EmbedBuilder[] = [];
             for (let i = 0; i < petsData.length; i += PAGE_SIZE) {

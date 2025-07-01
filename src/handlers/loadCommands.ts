@@ -2,7 +2,10 @@ import Discord from "discord.js";
 import fs from "fs";
 import path from "path";
 import { ClientWithCommands, Command } from "../types/discord";
-import { convertOptionToSlashCommandOption } from "../utils/convert";
+import {
+    convertOptionToSlashCommandOption,
+    convertOptionToSlashCommandSubcommandBuilder,
+} from "../utils/convert";
 
 export default async (bot: ClientWithCommands) => {
     console.log(`Loading commands...`);
@@ -24,10 +27,24 @@ export default async (bot: ClientWithCommands) => {
         if (command.options) {
             command.options.forEach((option) => {
                 const optionType =
-                    Discord.ApplicationCommandOptionType[option.type];
-                (slashCommand as any)[`add${optionType.capitalize()}Option`](
-                    convertOptionToSlashCommandOption(option)
-                );
+                    Discord.ApplicationCommandOptionType[
+                        option.type
+                    ].capitalize();
+
+                if (optionType === "Subcommand") {
+                    const subcommand =
+                        convertOptionToSlashCommandSubcommandBuilder(option);
+                    if (!subcommand)
+                        throw Error("Subcommand building error occurred");
+                    slashCommand.addSubcommand(subcommand);
+                    console.log(
+                        `  --> Sub command added: ${command.name} ${subcommand.name}`
+                    );
+                } else {
+                    (slashCommand as any)[
+                        `add${optionType}Option` as keyof typeof slashCommand
+                    ](convertOptionToSlashCommandOption(option));
+                }
             });
         }
 

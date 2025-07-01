@@ -1,4 +1,4 @@
-import Discord from "discord.js";
+import Discord, { SlashCommandSubcommandBuilder } from "discord.js";
 import { SlashCommandOption } from "../types/discord";
 import { Interval } from "../types/utils";
 import { TimeEach } from "../types/macros";
@@ -37,6 +37,10 @@ const convertOptionToSlashCommandOption = (
                 .setDescription(option.description)
                 .setRequired(option.required ?? false)
                 .setAutocomplete(option.autocomplete ?? false);
+            if (option.minValue !== undefined)
+                commandIntegerOption.setMinValue(option.minValue);
+            if (option.maxValue !== undefined)
+                commandIntegerOption.setMaxValue(option.maxValue);
             return commandIntegerOption;
         case Discord.ApplicationCommandOptionType.Mentionable:
             let commandMentionableOption =
@@ -53,6 +57,10 @@ const convertOptionToSlashCommandOption = (
                 .setDescription(option.description)
                 .setRequired(option.required ?? false)
                 .setAutocomplete(option.autocomplete ?? false);
+            if (option.minValue !== undefined)
+                commandNumberOption.setMinValue(option.minValue);
+            if (option.maxValue !== undefined)
+                commandNumberOption.setMaxValue(option.maxValue);
             return commandNumberOption;
         case Discord.ApplicationCommandOptionType.Role:
             let commandRoleOption = new Discord.SlashCommandRoleOption();
@@ -76,6 +84,31 @@ const convertOptionToSlashCommandOption = (
                 .setDescription(option.description)
                 .setRequired(option.required ?? false);
             return commandUserOption;
+        default:
+            return undefined;
+    }
+};
+const convertOptionToSlashCommandSubcommandBuilder = (
+    option: Discord.ApplicationCommandOptionData
+): SlashCommandSubcommandBuilder | undefined => {
+    switch (option.type) {
+        case Discord.ApplicationCommandOptionType.Subcommand:
+            const subCommandOption = new Discord.SlashCommandSubcommandBuilder()
+                .setName(option.name)
+                .setDescription(option.description);
+
+            if ("options" in option && Array.isArray(option.options)) {
+                for (const subOpt of option.options) {
+                    const optionType =
+                        Discord.ApplicationCommandOptionType[
+                            subOpt.type
+                        ].capitalize();
+                    (subCommandOption as any)[`add${optionType}Option`](
+                        convertOptionToSlashCommandOption(subOpt)
+                    );
+                }
+            }
+            return subCommandOption;
         default:
             return undefined;
     }
@@ -279,6 +312,7 @@ const formatAnnonceTime = (annonce: Announcement): string => {
 
 export {
     convertOptionToSlashCommandOption,
+    convertOptionToSlashCommandSubcommandBuilder,
     convertPermissionToString,
     convertStringToClassString,
     convertStringToDate,
