@@ -3,7 +3,7 @@ import { EPetEffectName, EPetEffectType } from "./pets";
 const classTypes: Record<string, string> = {
     DPS: "⚔️ DPS",
     Tank: "🛡️ Tank",
-    Heal: "🩹 Heal",
+    Soutien: "🩹 Soutien",
 };
 
 const rarityColors: Record<string, string> = {

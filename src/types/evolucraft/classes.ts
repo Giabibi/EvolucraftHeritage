@@ -25,7 +25,7 @@ enum EClass {
 enum EClassType {
     DPS = "DPS",
     Tank = "Tank",
-    Heal = "Heal",
+    Soutien = "Soutien",
 }
 enum EClassRarity {
     Commun = "Commun",

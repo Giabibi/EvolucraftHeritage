@@ -1,140 +1,140 @@
 [
     {
         "name": "Archer",
-        "description": "__description__",
+        "description": "Maîtres dans l'art du tir à l'arc, agiles et précis, ne ratant jamais leur cible.",
         "type": "DPS",
         "rarity": "Commun",
         "emoji": "🏹"
     },
     {
         "name": "Barde",
-        "description": "__description__",
-        "type": "Heal",
+        "description": "Maître dans l'art de la musique et de la poésie, charmant et inspirant, il envoûte toujours son auditoire.",
+        "type": "Soutien",
         "rarity": "Commun",
         "emoji": "🎵"
     },
     {
         "name": "Guerrier",
-        "description": "__description__",
+        "description": "Experts du combat rapproché, équipés d'armures lourdes et d'armes variées, combattant en première ligne.",
         "type": "Tank",
         "rarity": "Commun",
         "emoji": "⚔️"
     },
     {
         "name": "Mage",
-        "description": "__description__",
+        "description": "Manipulateurs des forces mystiques, lançant des sorts dévastateurs, incarnant la puissance des arcanes.",
         "type": "DPS",
         "rarity": "Commun",
         "emoji": "🔮"
     },
     {
         "name": "Illusionniste",
-        "description": "__description__",
+        "description": "Maître des illusions et de la ruse, trouble les sens et trompe l'ennemi, il frappe où nul s'y attend.",
         "type": "DPS",
         "rarity": "Commun",
         "emoji": "🎭"
     },
     {
         "name": "Assassin",
-        "description": "__description__",
+        "description": "Maîtres de l'ombre, spécialisés dans les attaques furtives et les éliminations rapides.",
         "type": "DPS",
         "rarity": "Rare",
         "emoji": "🗡️"
     },
     {
         "name": "Paladin",
-        "description": "__description__",
+        "description": "Chevaliers sacrés combattant au nom de la justice, purifiant les forces du malin.",
         "type": "Tank",
         "rarity": "Rare",
         "emoji": "🛡️"
     },
     {
         "name": "Élémentaliste",
-        "description": "__description__",
+        "description": "Maîtres des éléments primordiaux, manipulant le feu, le vent, l'eau et la terre. Aussi versatile que puissant.",
         "type": "DPS",
         "rarity": "Rare",
         "emoji": "🌪️"
     },
     {
         "name": "Chevalier des glaces",
-        "description": "__description__",
-        "type": "Tank",
+        "description": "Chevalier maniant le givre paralysant ses ennemis dans le froid et refroidi leurs ardeur.",
+        "type": "DPS",
         "rarity": "Rare",
         "emoji": "❄️"
     },
     {
         "name": "Chaman",
-        "description": "__description__",
-        "type": "Heal",
+        "description": "Utilisateurs des pouvoirs surnaturels, puisant leur force dans les esprits, redoutables mages païens.",
+        "type": "Soutien",
         "rarity": "Épique",
         "emoji": "🐺"
     },
     {
         "name": "Invocateur",
-        "description": "__description__",
+        "description": "Manipulateurs de monstres, contrôlant les bêtes de ce monde pour combattre à leurs côtés.",
         "type": "DPS",
         "rarity": "Épique",
         "emoji": "📜"
     },
     {
         "name": "Moine",
-        "description": "__description__",
+        "description": "S'entraînant sans relâche dans des terres reculées, il combine un entraînement acharné et une foi inflexible.",
         "type": "Tank",
         "rarity": "Épique",
         "emoji": "🧘"
     },
     {
         "name": "Faucheur",
-        "description": "__description__",
+        "description": "Fusion d'une discipline millénaire et d'une dévotion inflexible à la mort, le Faucheur aiguise sa faux, prêt à accomplir son devoir éternel.",
         "type": "DPS",
         "rarity": "Épique",
         "emoji": "⚰️"
     },
     {
         "name": "Archimage",
-        "description": "__description__",
+        "description": "Manipulateurs des forces mystiques, lançant des sorts dévastateurs, il incarne la puissance des arcanes.",
         "type": "DPS",
         "rarity": "Épique",
         "emoji": "🧙‍♂️"
     },
     {
         "name": "Guerrier Dragon",
-        "description": "__description__",
-        "type": "Tank",
+        "description": "Héros tueur de dragons, destructeur de cité, semant la peur dans le cœur de ses ennemis.",
+        "type": "DPS",
         "rarity": "Légendaire",
         "emoji": "🐉"
     },
     {
         "name": "Clerc",
-        "description": "__description__",
-        "type": "Heal",
+        "description": "Prêtres dévoués, guérissant les blessures et repoussant les forces obscures avec la magie divine.",
+        "type": "Soutien",
         "rarity": "Légendaire",
         "emoji": "✝️"
     },
     {
         "name": "Artiste Martial",
-        "description": "__description__",
-        "type": "Tank",
+        "description": "Maître légendaire dans l'art antique du poing d'acier, il recherche la perfection dans chacune de ses frappes.",
+        "type": "DPS",
         "rarity": "Légendaire",
         "emoji": "🥋"
     },
     {
         "name": "Artificier",
-        "description": "__description__",
+        "description": "Maître de la robotique et de la destruction, il répand la terreur avec son grincement sinistre.",
         "type": "DPS",
         "rarity": "Légendaire",
         "emoji": "💣"
     },
     {
         "name": "Samouraï",
-        "description": "__description__",
+        "description": "Guerrier d'honneur et de discipline maître de la lame et du silence, le samouraï fauche ses ennemis avec grâce et précision.",
         "type": "DPS",
         "rarity": "Légendaire",
         "emoji": "🈴"
     },
     {
         "name": "Chevalier de la mort",
-        "description": "__description__",
+        "description": "Guerrier hanté, serviteur de la mort, maniant la corruption et la magie noire, il inspire la terreur.",
         "type": "DPS",
         "rarity": "Mythique",
         "emoji": "☠️"
