@@ -13,13 +13,13 @@ ENV_FILE="$SCRIPT_DIR/.env"
 source "$ENV_FILE"
 
 # Vérifier que les variables nécessaires existent
-if [[ -z "$DATABASE_URL" || -z "$DISCORD_BOT_DB" ]]; then
-  printError "Les variables DATABASE_URL ou DISCORD_BOT_DB sont manquantes dans $ENV_FILE." 4
+if [[ -z "$DATABASE_URL" || -z "$DISCORD_EVO_DB" ]]; then
+  printError "Les variables DATABASE_URL ou DISCORD_EVO_DB sont manquantes dans $ENV_FILE." 4
   exit 1
 fi
 
-# Remplacer le port dans DATABASE_URL par la valeur de DISCORD_BOT_DB
-UPDATED_DATABASE_URL=$(echo "$DATABASE_URL" | sed -E "s/:[0-9]+\/w/:$DISCORD_BOT_DB\/w/")
+# Remplacer le port dans DATABASE_URL par la valeur de DISCORD_EVO_DB
+UPDATED_DATABASE_URL=$(echo "$DATABASE_URL" | sed -E "s/:[0-9]+\/w/:$DISCORD_EVO_DB\/w/")
 
 # Mettre à jour le fichier .env
 sed -i -E "s|^DATABASE_URL=.*|DATABASE_URL=\"$UPDATED_DATABASE_URL\"|" "$ENV_FILE"

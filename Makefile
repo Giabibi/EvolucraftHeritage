@@ -28,7 +28,7 @@ start:
 	@echo "MySQL est prêt."
 	@echo "Restauration de la dernière sauvegarde si disponible..."
 	@if [ -f $(BACKUP_DIR)/latest_backup.sql ]; then \
-		cat $(BACKUP_DIR)/latest_backup.sql | docker exec -i $(MYSQL_CONTAINER_NAME) mysql -h ${IP} -P ${DISCORD_BOT_DB} -u root -p${PMA_ROOT_PASSWORD} tmp_db; \
+		cat $(BACKUP_DIR)/latest_backup.sql | docker exec -i $(MYSQL_CONTAINER_NAME) mysql -h ${IP} -P ${DISCORD_EVO_DB} -u root -p${PMA_ROOT_PASSWORD} tmp_db; \
 		echo "Restauration terminée."; \
 	else \
 		echo "Aucune sauvegarde trouvée. Démarrage sans restauration."; \
@@ -69,6 +69,6 @@ restart: stop start
 
 .PHONY: check-vars
 check-vars:
-	@echo "DISCORD_BOT_DB = ${DISCORD_BOT_DB}"
-	@echo "DISCORD_BOT_PMA = ${DISCORD_BOT_PMA}"
-	@echo "DISCORD_BOT_API = ${DISCORD_BOT_API}"
+	@echo "DISCORD_EVO_DB = ${DISCORD_EVO_DB}"
+	@echo "DISCORD_EVO_PMA = ${DISCORD_EVO_PMA}"
+	@echo "DISCORD_EVO_API = ${DISCORD_EVO_API}"

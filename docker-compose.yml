@@ -6,7 +6,7 @@ services:
     #     MYSQL_ROOT_PASSWORD: ${PMA_ROOT_PASSWORD}
     #     MYSQL_DATABASE: tmp_db
     #   ports:
-    #     - "${DISCORD_BOT_DB}:${DISCORD_BOT_DB}"
+    #     - "${DISCORD_EVO_DB}:${DISCORD_EVO_DB}"
     #   volumes:
     #     - mysql_data:/var/lib/mysql
     #     - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -16,10 +16,10 @@ services:
     #   container_name: phpmyadmin_container
     #   environment:
     #     PMA_HOST: db
-    #     PMA_PORT: ${DISCORD_BOT_DB}
+    #     PMA_PORT: ${DISCORD_EVO_DB}
     #     MYSQL_ROOT_PASSWORD: ${PMA_ROOT_PASSWORD}
     #   ports:
-    #     - "${DISCORD_BOT_PMA}:80"
+    #     - "${DISCORD_EVO_PMA}:80"
     #   depends_on:
     #     - db
 
@@ -29,9 +29,9 @@ services:
         container_name: server_container
         volumes:
             - .:/app
-            - ./backup:/backup
+            # - ./backup:/backup
         ports:
-            - "${DISCORD_BOT_API}:${DISCORD_BOT_API}"
+            - "${DISCORD_EVO_API}:${DISCORD_EVO_API}"
         # depends_on:
         #     - db
 # volumes:
