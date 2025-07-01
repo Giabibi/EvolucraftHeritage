@@ -12,4 +12,3 @@ https://discord.com/oauth2/authorize?client_id=1388845769141915871&permissions=2
 
 -   Add description to classes
 -   Edit classes data
--   Change link dungeon images

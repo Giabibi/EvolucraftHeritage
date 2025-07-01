@@ -4,97 +4,97 @@
         "minLevel": 1,
         "maxPlayers": 4,
         "portalColor": "🟢 Vert",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584280652906666/image.png?ex=6862d4e3&is=68618363&hm=b88b270f0976a7e94a10c204933f344fb514eeaedeff4e10529145a1446d66ce&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-a729ba49f1f4b4a61d542b7a68471cf5699cc83c%252FPortail_Commun.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=27609b2c&sv=2"
     },
     {
         "name": "Rare",
         "minLevel": 10,
         "maxPlayers": 4,
         "portalColor": "🟠 Orange",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584321018761378/image.png?ex=6862d4ec&is=6861836c&hm=119bdbe8735209fe0015542af51d920cff8188e41cf535c090312e16c6fb0afe&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-606e2b6a47fcde7be3cd95e0f505089a0e3fd4c1%252FPortail_Rare.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=b491cb96&sv=2"
     },
     {
         "name": "Épique",
         "minLevel": 25,
         "maxPlayers": 4,
         "portalColor": "🔵 Bleu",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584416812470283/image.png?ex=6862d503&is=68618383&hm=3dd51ebec7ee1241c41d468e5e389b99ced05f2567127b746493c7ed6c9a1fee&=&format=webp&quality=lossless"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-4cbb83f701735273e22ab7016881850d77c2eb32%252FPortail_Epique.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=7264e5b5&sv=2"
     },
     {
         "name": "Légendaire",
         "minLevel": 40,
         "maxPlayers": 4,
         "portalColor": "🟣 Violet",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584454267867246/image.png?ex=6862d50c&is=6861838c&hm=c89aba32689c82098e471d2104d293f4ce444164ddfb4abc00c417e11ebb8ed6&=&format=webp&quality=lossless"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-bb0793e9353dabaf1b9d520e31f8e6665606f759%252FPortail_Legendaire.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=d15dbc51&sv=2"
     },
     {
         "name": "Mythique",
         "minLevel": 50,
         "maxPlayers": 10,
         "portalColor": "⚫ Noir",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584527131185242/image.png?ex=68637ddd&is=68622c5d&hm=e3a4ccca06995dba74acb0636ecb39d6caabbb1926a30ed1cb9fdc01fba4d96f&=&format=webp&quality=lossless"
+        "imgUrl": "https://cdn.discordapp.com/attachments/768876685940097024/1389581359021948970/image.png?ex=686523fd&is=6863d27d&hm=6bcdbd0c8f0c268acc2ed33ffbd475730008213cdc0cbafc910477f111be1a29&"
     },
     {
         "name": "Draconique",
         "minLevel": 10,
         "maxPlayers": 10,
         "portalColor": "🔴 Rouge",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584560580759612/image.png?ex=68637de5&is=68622c65&hm=167e2e4d0c11d3b32da22c95a4ee9f9a2de492f3c69f747e7b25e1f70da1ec9e&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-70a802562e2eb2d6e78c173e51a03c9cbcb211be%252FPortail_Draconique.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=7991c91e&sv=2"
     },
     {
         "name": "Abyssal",
         "minLevel": 10,
         "maxPlayers": 4,
         "portalColor": "🩵 Bleu clair",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584597117472891/image.png?ex=68637dee&is=68622c6e&hm=0530f3a2374d251f6cbc12f0cafa43e73ae6f72550e2475bbd4934b32aa68392&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-ab7faec72f6790378c3f6d72617d42d6d9dee920%252FPortail_Abyssal.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=10c72b6e&sv=2"
     },
     {
         "name": "Halloween",
         "minLevel": 20,
         "maxPlayers": 4,
         "portalColor": "🟠🟢 Orange et Vert",
-        "imgUrl": "https://cdn.discordapp.com/attachments/1388584209173713048/1388584634454900766/image.png?ex=68637df7&is=68622c77&hm=5736242f996e055f309b16085dec1e4937ee20997e1815517e46550c0ec8bcb1"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-9b6a7da055fc8129ee10d1364b758a7d776d0306%252FPortail_Halloween.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=d2e38084&sv=2"
     },
     {
         "name": "Givré Commun",
         "minLevel": 15,
         "maxPlayers": 2,
         "portalColor": "🩵 Bleu clair (🍬 Avec des sucres d'orge)",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584665681756160/image.png?ex=68637dfe&is=68622c7e&hm=d20f5899660b611dd0d54927a37a45744094d62f2a8dc35e8dbf99a7a709b038&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-8181045e3e204c4fa53067410aae8011f8798088%252FPortail_Givre15.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=bd6dff96&sv=2"
     },
     {
         "name": "Givré Épique",
         "minLevel": 40,
         "maxPlayers": 2,
         "portalColor": "🔵 Bleu (🍬 Avec des sucres d'orge)",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584708308209815/image.png?ex=68637e09&is=68622c89&hm=52e14297c262e4974bcece341047eab70603b79173f08dacd8a8cc075795b04a&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-e4da9dcfacd95ce9e1fe792d5b8501fcb8c41e68%252FPortail_Givre40.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=dc1bc7c4&sv=2"
     },
     {
         "name": "Amour",
         "minLevel": 10,
         "maxPlayers": 4,
         "portalColor": "🩷🟣 Rose et Violet",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584748137582712/image.png?ex=68637e12&is=68622c92&hm=7acd25800872add16d926b2a022eac16644e08ed0e9844fccdd231f003f2623b&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-682d80d4e075a00103c34a21bad8a414f34301b7%252FPortail_Amour.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=7a45d0a1&sv=2"
     },
     {
         "name": "Cupidon",
         "minLevel": 40,
         "maxPlayers": 8,
         "portalColor": "🩷🟣 Rose et Violet",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584782992244817/image.png?ex=68637e1a&is=68622c9a&hm=0f4badecf89e88a8f7dc80786772bde9d6a3b0583be087a6fe5b3dda9c1d67b0&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-7ab82467f337084dbf994af9e4d4d621f34fdd4a%252FPortail_Cupidon.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=f0ba1c16&sv=2"
     },
     {
         "name": "Terrier du Roi Lapin",
         "minLevel": 15,
         "maxPlayers": 4,
         "portalColor": "🏳️‍🌈 Multicolor (🌲 Dans une souche d'arbre)",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584815363625101/image.png?ex=68637e22&is=68622ca2&hm=bcbbd04071c31bcb2c6299ee25a2ea7476cf7ad3256541114bd1a835ec2ee460&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-dc20da1e444305bd99ab9bcf3ffc0d6019949511%252FPortail_TerrierLapin.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=ab618d45&sv=2"
     },
     {
         "name": "Fabrique de Chocolat",
         "minLevel": 40,
         "maxPlayers": 4,
         "portalColor": "🩷 Rose",
-        "imgUrl": "https://media.discordapp.net/attachments/1388584209173713048/1388584850319216652/image.png?ex=68637e2a&is=68622caa&hm=a1869ee0d19e07beecfb2be3ceae7c1fe5416b9d9431d9ca24b562f03d2815c8&=&format=webp&quality=lossless&width=1716&height=902"
+        "imgUrl": "https://wiki.evolucraft.fr/~gitbook/image?url=https%3A%2F%2F1419017781-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWDCPP1UhDKxDeceEGeZc%252Fuploads%252Fgit-blob-415f2a64c7b46a9fc40c2fa7e97f9193c9eddaa1%252FPortail_FabriqueChocolat.png%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=ed843d4a&sv=2"
     }
 ]
