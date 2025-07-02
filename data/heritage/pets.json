@@ -1,10 +1,74 @@
 [
     {
         "name": "Denvheur",
-        "level": 20
+        "level": 20,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 7500
+            },
+            {
+                "level": 5,
+                "type": "BuffSpecial",
+                "name": "Célérité",
+                "amount": 2
+            },
+            {
+                "level": 10,
+                "type": "Stat",
+                "name": "Défense",
+                "amount": 6
+            },
+            {
+                "level": 15,
+                "type": "Vente",
+                "name": "de Lingots de fer",
+                "amount": 15
+            },
+            {
+                "level": 20,
+                "type": "Exp",
+                "name": "Mineur",
+                "amount": 7.5
+            }
+        ]
     },
     {
         "name": "Pow",
-        "level": 20
+        "level": 20,
+        "effects": [
+            {
+                "level": 1,
+                "type": "ArgentStockage",
+                "name": "$/h + Stockage double coffre",
+                "amount": 7000
+            },
+            {
+                "level": 5,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 0
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Terrestre",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Stat",
+                "name": "Défense",
+                "amount": 5
+            },
+            {
+                "level": 20,
+                "type": "Exp",
+                "name": "Fermier",
+                "amount": 7.5
+            }
+        ]
     }
 ]

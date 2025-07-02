@@ -7,6 +7,7 @@ import Discord, {
     MessageFlags,
 } from "discord.js";
 import { ClientWithCommands, Command } from "../types/discord";
+import petsData from "../../data/pets.json";
 import heritagePetsData from "../../data/heritage/pets.json";
 import { EPet } from "../types/evolucraft/pets";
 import { HERITAGE_ROLE_ID, saveHeritagePets } from "../types/heritage/pets";
@@ -22,6 +23,15 @@ export default {
             type: Discord.ApplicationCommandOptionType.Subcommand,
             name: "list",
             description: "Affiche les pets heritage",
+            options: [
+                {
+                    type: Discord.ApplicationCommandOptionType.String,
+                    name: "job",
+                    description: "Filtrer les pets par EXP de métier",
+                    required: false,
+                    autocomplete: true,
+                },
+            ],
         },
         {
             type: Discord.ApplicationCommandOptionType.Subcommand,
@@ -132,6 +142,24 @@ export default {
                     .map((name) => ({ name, value: name }))
             );
         }
+        if (focused.name === "job") {
+            const allProfessions = petsData
+                .flatMap((pet) => pet.effects)
+                .filter(
+                    (effect) =>
+                        effect.type.toLowerCase() === "EXP".toLowerCase()
+                )
+                .map((effect) => effect.name);
+            const uniqueProfessions = [...new Set(allProfessions)];
+
+            const filtered = uniqueProfessions.filter((p) =>
+                p.toLowerCase().includes(value)
+            );
+
+            await interaction.respond(
+                filtered.map((p) => ({ name: p, value: p })).slice(0, 25)
+            );
+        }
     },
 
     async run(
@@ -162,19 +190,53 @@ export default {
         }
 
         if (subcommand === "list") {
+            const job = commandInteraction.options.getString("job");
+
+            const filteredPets = job
+                ? heritagePetsData.filter((pet) =>
+                      pet.effects?.some(
+                          (effect) =>
+                              effect.type.toLowerCase() ===
+                                  "EXP".toLowerCase() &&
+                              effect.name
+                                  .toLowerCase()
+                                  .includes(job.toLowerCase())
+                      )
+                  )
+                : heritagePetsData;
+
             const embed = new EmbedBuilder()
                 .setColor(bot.color)
-                .setTitle("Pets héritage")
+                .setTitle(job ? `Pets héritage - EXP ${job}` : "Pets héritage")
                 .setDescription(
-                    heritagePetsData.length > 0
-                        ? heritagePetsData
-                              .sort()
-                              .map(
-                                  (pet) =>
-                                      `• **${pet.name}** (Niveau ${pet.level})`
-                              )
-                              .join("\n")
-                        : "Aucun pet hérité enregistré."
+                    filteredPets.length > 0
+                        ? filteredPets
+                              .sort((a, b) => a.name.localeCompare(b.name))
+                              .map((pet) => {
+                                  const effects = pet.effects
+                                      ?.filter(
+                                          (effect) =>
+                                              effect.type.toLowerCase() ===
+                                              "EXP".toLowerCase()
+                                      )
+                                      .map(
+                                          (effect) =>
+                                              `• ${effect.name} : \`${effect.amount}%\``
+                                      )
+                                      .join("\n");
+
+                                  return `🐾 **${pet.name}** (Niveau ${
+                                      pet.level
+                                  })${
+                                      !!job
+                                          ? effects
+                                              ? "\n" + effects
+                                              : "\n_Aucun effet._"
+                                          : ""
+                                  }`;
+                              })
+                              .join("\n\n")
+                        : "Aucun pet Héritage trouvé pour cette recherche."
                 )
                 .setTimestamp();
 
@@ -188,7 +250,16 @@ export default {
             const name = commandInteraction.options.getString("name", true);
             const level = commandInteraction.options.getInteger("level", true);
 
-            heritagePetsData.push({ name, level });
+            const petInfo = petsData.find((pet) => pet.name === name);
+            if (!petInfo) {
+                await interaction.reply({
+                    content: `❌ Pet **${name}** introuvable dans la base de données.`,
+                    flags: MessageFlags.Ephemeral,
+                });
+                return;
+            }
+
+            heritagePetsData.push({ name, level, effects: petInfo.effects });
             saveHeritagePets(heritagePetsData);
 
             await interaction.reply({

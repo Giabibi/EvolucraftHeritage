@@ -10,6 +10,7 @@ import { ClientWithCommands, Command } from "../types/discord";
 import petsData from "../../data/pets.json";
 import handlePetOption from "./pets/pet";
 import { EPet } from "../types/evolucraft/pets";
+import { rarityColors } from "../types/evolucraft/prettyDisplay";
 
 export default {
     name: "pets",
@@ -104,7 +105,7 @@ export default {
                 embed.addFields(
                     petsSlice.map((pet) => ({
                         name: `${pet.name}`,
-                        value: `Rareté : \`${pet.rarity}\``,
+                        value: `Rareté : \`${rarityColors[pet.rarity]}\``,
                         inline: true,
                     }))
                 );

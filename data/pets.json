@@ -2117,8 +2117,8 @@
             },
             {
                 "level": 20,
-                "type": "Argent",
-                "name": "% d'EXP Bûcheron",
+                "type": "EXP",
+                "name": "Bûcheron",
                 "amount": 10
             }
         ]
@@ -2153,8 +2153,8 @@
             },
             {
                 "level": 20,
-                "type": "Argent",
-                "name": "% d'EXP Fermier",
+                "type": "EXP",
+                "name": "Fermier",
                 "amount": 10
             }
         ]
@@ -2177,8 +2177,8 @@
             },
             {
                 "level": 10,
-                "type": "Argent",
-                "name": "% d'EXP Métiers",
+                "type": "EXP",
+                "name": "Métiers",
                 "amount": 2.5
             },
             {
@@ -2261,8 +2261,8 @@
             },
             {
                 "level": 20,
-                "type": "Argent",
-                "name": "% d'EXP Métiers",
+                "type": "EXP",
+                "name": "Métiers",
                 "amount": 5
             }
         ]

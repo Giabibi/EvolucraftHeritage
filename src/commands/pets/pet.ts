@@ -1,7 +1,10 @@
 import Discord, { MessageFlags } from "discord.js";
 import { ClientWithCommands } from "../../types/discord";
 import { Pet, EPet, getPetByEPet, isEPet } from "../../types/evolucraft/pets";
-import { displayPetEffect } from "../../types/evolucraft/prettyDisplay";
+import {
+    displayPetEffect,
+    rarityColors,
+} from "../../types/evolucraft/prettyDisplay";
 
 const handlePetOption = async (
     bot: ClientWithCommands,
@@ -27,7 +30,7 @@ const handlePetOption = async (
         .setDescription(
             `
                 Nom : \`${pet.name}\`
-                Rareté : \`${pet.rarity}\`
+                Rareté : \`${rarityColors[pet.rarity]}\`
             `
         )
         .setTimestamp()
