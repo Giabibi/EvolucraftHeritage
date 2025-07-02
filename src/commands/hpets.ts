@@ -209,7 +209,9 @@ export default {
             const pages: EmbedBuilder[] = [];
 
             for (let i = 0; i < filteredPets.length; i += PAGE_SIZE) {
-                const petsSlice = filteredPets.slice(i, i + PAGE_SIZE);
+                const petsSlice = filteredPets.sort((a, b) =>
+                    a.name.localeCompare(b.name)
+                ).slice(i, i + PAGE_SIZE);
                 const embed = new EmbedBuilder()
                     .setColor(bot.color)
                     .setTitle(
