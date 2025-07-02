@@ -205,44 +205,103 @@ export default {
                   )
                 : heritagePetsData;
 
-            const embed = new EmbedBuilder()
-                .setColor(bot.color)
-                .setTitle(job ? `Pets héritage - EXP ${job}` : "Pets héritage")
-                .setDescription(
-                    filteredPets.length > 0
-                        ? filteredPets
-                              .sort((a, b) => a.name.localeCompare(b.name))
-                              .map((pet) => {
-                                  const effects = pet.effects
-                                      ?.filter(
-                                          (effect) =>
-                                              effect.type.toLowerCase() ===
-                                              "EXP".toLowerCase()
-                                      )
-                                      .map(
-                                          (effect) =>
-                                              `• ${effect.name} : \`${effect.amount}%\``
-                                      )
-                                      .join("\n");
+            const PAGE_SIZE = 18;
+            const pages: EmbedBuilder[] = [];
 
-                                  return `🐾 **${pet.name}** (Niveau ${
-                                      pet.level
-                                  })${
-                                      !!job
-                                          ? effects
-                                              ? "\n" + effects
-                                              : "\n_Aucun effet._"
-                                          : ""
-                                  }`;
-                              })
-                              .join("\n\n")
-                        : "Aucun pet Héritage trouvé pour cette recherche."
-                )
-                .setTimestamp();
+            for (let i = 0; i < filteredPets.length; i += PAGE_SIZE) {
+                const petsSlice = filteredPets.slice(i, i + PAGE_SIZE);
+                const embed = new EmbedBuilder()
+                    .setColor(bot.color)
+                    .setTitle(
+                        job
+                            ? `Pets héritage - EXP ${job} (Page ${
+                                  pages.length + 1
+                              }/${Math.ceil(filteredPets.length / PAGE_SIZE)})`
+                            : `Pets héritage (Page ${
+                                  pages.length + 1
+                              }/${Math.ceil(filteredPets.length / PAGE_SIZE)})`
+                    )
+                    .setTimestamp()
+                    .setFooter({
+                        text: `―――――――――――――――――――――\n⏳ Les boutons expirent après 60 secondes.\n―――――――――――――――――――――\n\nPage ${
+                            pages.length + 1
+                        }/${Math.ceil(filteredPets.length / PAGE_SIZE)}`,
+                    });
+
+                embed.setDescription(
+                    petsSlice
+                        .map((pet) => {
+                            const effects = pet.effects
+                                ?.filter((e) => e.type.toLowerCase() === "exp")
+                                .map((e) => `• ${e.name} : \`${e.amount}%\``)
+                                .join("\n");
+                            return `🐾 **${pet.name}** (Niveau ${pet.level})${
+                                job
+                                    ? effects
+                                        ? "\n" + effects
+                                        : "\n_Aucun effet._"
+                                    : ""
+                            }`;
+                        })
+                        .join("\n")
+                );
+
+                pages.push(embed);
+            }
+
+            let currentPage = 0;
+
+            const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
+                new ButtonBuilder()
+                    .setCustomId("prev")
+                    .setEmoji("⬅️")
+                    .setStyle(ButtonStyle.Primary)
+                    .setDisabled(true),
+                new ButtonBuilder()
+                    .setCustomId("next")
+                    .setEmoji("➡️")
+                    .setStyle(ButtonStyle.Primary)
+                    .setDisabled(pages.length <= 1)
+            );
 
             await interaction.reply({
-                embeds: [embed],
+                embeds: [pages[currentPage]],
+                components: [row],
                 flags: MessageFlags.Ephemeral,
+            });
+
+            const message = await interaction.fetchReply();
+
+            const collector = message.createMessageComponentCollector({
+                componentType: ComponentType.Button,
+                time: 60_000,
+            });
+
+            collector.on("collect", async (btnInteraction) => {
+                if (btnInteraction.user.id !== interaction.user.id) {
+                    await btnInteraction.reply({
+                        content: "⛔ Tu ne peux pas interagir avec ce menu.",
+                        flags: MessageFlags.Ephemeral,
+                    });
+                    return;
+                }
+
+                if (btnInteraction.customId === "prev" && currentPage > 0) {
+                    currentPage--;
+                } else if (
+                    btnInteraction.customId === "next" &&
+                    currentPage < pages.length - 1
+                ) {
+                    currentPage++;
+                }
+
+                row.components[0].setDisabled(currentPage === 0);
+                row.components[1].setDisabled(currentPage === pages.length - 1);
+
+                await btnInteraction.update({
+                    embeds: [pages[currentPage]],
+                    components: [row],
+                });
             });
         }
 
