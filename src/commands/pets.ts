@@ -36,6 +36,13 @@ export default {
                     value: classe as string,
                 })),
         } as Discord.ApplicationCommandAutocompleteStringOptionData,
+        {
+            type: Discord.ApplicationCommandOptionType.String,
+            name: "job",
+            description: "Filtrer les pets par métier (type EXP)",
+            required: false,
+            autocomplete: true,
+        } as Discord.ApplicationCommandAutocompleteStringOptionData,
     ],
 
     async autocomplete(
@@ -55,18 +62,38 @@ export default {
         let choices: { name: string; value: string }[] = [];
         if (focusedOption.name === "pet") {
             choices = options.find((opt) => opt.name === "pet")?.choices ?? [];
+            const filtered =
+                entry === ""
+                    ? choices
+                    : choices.filter((choice) =>
+                          choice.name.toLowerCase().includes(entry)
+                      );
+
+            await interaction.respond(
+                filtered
+                    .sort((a, b) => a.name.localeCompare(b.name))
+                    .slice(0, 25)
+            );
+        } else if (focusedOption.name === "job") {
+            const allJobs = new Set<string>();
+            for (const pet of petsData) {
+                pet.effects?.forEach((effect) => {
+                    if (effect.type.toLowerCase() === "EXP".toLowerCase()) {
+                        allJobs.add(effect.name);
+                    }
+                });
+            }
+            const filtered = Array.from(allJobs).filter((job) =>
+                job.toLowerCase().includes(entry)
+            );
+
+            await interaction.respond(
+                filtered
+                    .sort()
+                    .slice(0, 25)
+                    .map((name) => ({ name, value: name }))
+            );
         }
-
-        const filtered =
-            entry === ""
-                ? choices
-                : choices.filter((choice) =>
-                      choice.name.toLowerCase().includes(entry)
-                  );
-
-        await interaction.respond(
-            filtered.sort((a, b) => a.name.localeCompare(b.name)).slice(0, 25)
-        );
     },
 
     async run(
@@ -80,34 +107,80 @@ export default {
         const commandInteraction =
             interaction as Discord.ChatInputCommandInteraction;
         const selectedPet = commandInteraction.options.getString("pet");
+        const selectedJob = commandInteraction.options.getString("job");
 
+        if (selectedPet && selectedJob) {
+            interaction.reply({
+                content:
+                    "⛔ Tu ne peux pas utiliser `pet` et `job` en même temps.",
+                flags: MessageFlags.Ephemeral,
+            });
+            return;
+        }
         if (selectedPet) {
             handlePetOption(bot, interaction, selectedPet);
         } else {
             const PAGE_SIZE = 18;
+            const filteredPets = selectedJob
+                ? petsData.filter((pet) =>
+                      pet.effects?.some(
+                          (effect) =>
+                              effect.type.toLowerCase() ===
+                                  "EXP".toLowerCase() &&
+                              effect.name
+                                  .toLowerCase()
+                                  .includes(selectedJob.toLowerCase())
+                      )
+                  )
+                : petsData;
+
             const pages: EmbedBuilder[] = [];
-            for (let i = 0; i < petsData.length; i += PAGE_SIZE) {
+            for (let i = 0; i < filteredPets.length; i += PAGE_SIZE) {
                 const embed = new EmbedBuilder()
                     .setColor(bot.color)
                     .setTitle(
-                        `Liste des pets Évolucraft (Page ${
-                            pages.length + 1
-                        }/${Math.ceil(petsData.length / PAGE_SIZE)})`
+                        selectedJob
+                            ? `Pets EXP : ${selectedJob} (Page ${
+                                  pages.length + 1
+                              }/${Math.ceil(filteredPets.length / PAGE_SIZE)})`
+                            : `Liste des pets Évolucraft (Page ${
+                                  pages.length + 1
+                              }/${Math.ceil(filteredPets.length / PAGE_SIZE)})`
                     )
                     .setTimestamp()
                     .setFooter({
                         text: `―――――――――――――――――――――\n⏳ Les boutons expirent après 60 secondes.\n―――――――――――――――――――――\n\nPage ${
                             pages.length + 1
-                        }/${Math.ceil(petsData.length / PAGE_SIZE)}`,
+                        }/${Math.ceil(filteredPets.length / PAGE_SIZE)}`,
                     });
 
-                const petsSlice = petsData.slice(i, i + PAGE_SIZE);
+                const petsSlice = filteredPets.slice(i, i + PAGE_SIZE);
                 embed.addFields(
-                    petsSlice.map((pet) => ({
-                        name: `${pet.name}`,
-                        value: `Rareté : \`${rarityColors[pet.rarity]}\``,
-                        inline: true,
-                    }))
+                    petsSlice.map((pet) => {
+                        const expEffect = selectedJob
+                            ? pet.effects?.find(
+                                  (e) =>
+                                      e.type.toLowerCase() ===
+                                          "EXP".toLowerCase() &&
+                                      e.name
+                                          .toLowerCase()
+                                          .includes(selectedJob.toLowerCase())
+                              )
+                            : null;
+
+                        return {
+                            name: `🐾 **${pet.name}**`,
+                            value:
+                                selectedJob && expEffect
+                                    ? `Rareté : \`${
+                                          rarityColors[pet.rarity]
+                                      }\`\nEXP : \`+${expEffect.amount}%\``
+                                    : `Rareté : \`${
+                                          rarityColors[pet.rarity]
+                                      }\``,
+                            inline: true,
+                        };
+                    })
                 );
 
                 pages.push(embed);

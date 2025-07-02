@@ -936,6 +936,42 @@
         ]
     },
     {
+        "name": "Rodeer",
+        "rarity": "Épique",
+        "effects": [
+            {
+                "level": 1,
+                "type": "Vente",
+                "name": "de Steak",
+                "amount": 15
+            },
+            {
+                "level": 5,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 5500
+            },
+            {
+                "level": 10,
+                "type": "Stat",
+                "name": "Mana",
+                "amount": 15
+            },
+            {
+                "level": 15,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 6250
+            },
+            {
+                "level": 20,
+                "type": "Exp",
+                "name": "Forgemage",
+                "amount": 7.5
+            }
+        ]
+    },
+    {
         "name": "Anubis",
         "rarity": "Épique",
         "effects": [
@@ -1427,8 +1463,8 @@
             },
             {
                 "level": 15,
-                "type": "Argent",
-                "name": "% d'argent Métiers",
+                "type": "Exp",
+                "name": "Métiers",
                 "amount": 2.5
             },
             {
@@ -1577,8 +1613,8 @@
             },
             {
                 "level": 20,
-                "type": "Argent",
-                "name": "% d'argent Chasseur",
+                "type": "Exp",
+                "name": "Chasseur",
                 "amount": 7.5
             }
         ]
@@ -1709,8 +1745,8 @@
             },
             {
                 "level": 10,
-                "type": "Argent",
-                "name": "% d'argent Pêcheur",
+                "type": "Exp",
+                "name": "Pêcheur",
                 "amount": 15
             },
             {
@@ -1817,8 +1853,8 @@
             },
             {
                 "level": 10,
-                "type": "Argent",
-                "name": "% d'argent Fermier",
+                "type": "Exp",
+                "name": "Fermier",
                 "amount": 15
             },
             {
@@ -1853,8 +1889,8 @@
             },
             {
                 "level": 10,
-                "type": "Argent",
-                "name": "% d'argent Forgemage",
+                "type": "Exp",
+                "name": "Forgemage",
                 "amount": 15
             },
             {
@@ -1889,8 +1925,8 @@
             },
             {
                 "level": 10,
-                "type": "Argent",
-                "name": "% d'argent Chasseur",
+                "type": "Exp",
+                "name": "Chasseur",
                 "amount": 15
             },
             {
@@ -1925,8 +1961,8 @@
             },
             {
                 "level": 10,
-                "type": "Argent",
-                "name": "% d'argent Mineur",
+                "type": "Exp",
+                "name": "Mineur",
                 "amount": 15
             },
             {
@@ -1961,8 +1997,8 @@
             },
             {
                 "level": 10,
-                "type": "Argent",
-                "name": "% d'argent Bûcheron",
+                "type": "Exp",
+                "name": "Bûcheron",
                 "amount": 15
             },
             {
@@ -2009,8 +2045,8 @@
             },
             {
                 "level": 20,
-                "type": "Argent",
-                "name": "% d'argent Métiers",
+                "type": "Exp",
+                "name": "Métiers",
                 "amount": 5
             }
         ]
@@ -2225,8 +2261,8 @@
             },
             {
                 "level": 20,
-                "type": "Argent",
-                "name": "% d'argent Métiers",
+                "type": "Exp",
+                "name": "Métiers",
                 "amount": 7.5
             }
         ]
@@ -2297,8 +2333,8 @@
             },
             {
                 "level": 20,
-                "type": "Argent",
-                "name": "% d'argent Métiers",
+                "type": "Exp",
+                "name": "Métiers",
                 "amount": 10
             }
         ]
