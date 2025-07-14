@@ -70,5 +70,761 @@
                 "amount": 7.5
             }
         ]
+    },
+    {
+        "name": "Dracon",
+        "level": 10,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Résistance",
+                "name": "Résistance au feu",
+                "amount": 0
+            },
+            {
+                "level": 5,
+                "type": "Exp",
+                "name": "Chasseur",
+                "amount": 7.5
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Aérienne",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "BuffSpecial",
+                "name": "de chance d'enflammer les ennemis",
+                "amount": 10
+            },
+            {
+                "level": 20,
+                "type": "Vente",
+                "name": "de butins de monstres",
+                "amount": 15
+            }
+        ]
+    },
+    {
+        "name": "Dracon",
+        "level": 10,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Résistance",
+                "name": "Résistance au feu",
+                "amount": 0
+            },
+            {
+                "level": 5,
+                "type": "Exp",
+                "name": "Chasseur",
+                "amount": 7.5
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Aérienne",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "BuffSpecial",
+                "name": "de chance d'enflammer les ennemis",
+                "amount": 10
+            },
+            {
+                "level": 20,
+                "type": "Vente",
+                "name": "de butins de monstres",
+                "amount": 15
+            }
+        ]
+    },
+    {
+        "name": "Groot",
+        "level": 20,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Vente",
+                "name": "de Bûches de mangrove",
+                "amount": 15
+            },
+            {
+                "level": 5,
+                "type": "Stat",
+                "name": "Vie",
+                "amount": 30
+            },
+            {
+                "level": 10,
+                "type": "Stat",
+                "name": "Régénération",
+                "amount": 8
+            },
+            {
+                "level": 15,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 5000
+            },
+            {
+                "level": 20,
+                "type": "Exp",
+                "name": "Chasseur",
+                "amount": 7.5
+            }
+        ]
+    },
+    {
+        "name": "Denvheur",
+        "level": 5,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 7500
+            },
+            {
+                "level": 5,
+                "type": "BuffSpecial",
+                "name": "Célérité",
+                "amount": 2
+            },
+            {
+                "level": 10,
+                "type": "Stat",
+                "name": "Défense",
+                "amount": 6
+            },
+            {
+                "level": 15,
+                "type": "Vente",
+                "name": "de Lingots de fer",
+                "amount": 15
+            },
+            {
+                "level": 20,
+                "type": "Exp",
+                "name": "Mineur",
+                "amount": 7.5
+            }
+        ]
+    },
+    {
+        "name": "Denvheur",
+        "level": 5,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 7500
+            },
+            {
+                "level": 5,
+                "type": "BuffSpecial",
+                "name": "Célérité",
+                "amount": 2
+            },
+            {
+                "level": 10,
+                "type": "Stat",
+                "name": "Défense",
+                "amount": 6
+            },
+            {
+                "level": 15,
+                "type": "Vente",
+                "name": "de Lingots de fer",
+                "amount": 15
+            },
+            {
+                "level": 20,
+                "type": "Exp",
+                "name": "Mineur",
+                "amount": 7.5
+            }
+        ]
+    },
+    {
+        "name": "Goat",
+        "level": 10,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 3000
+            },
+            {
+                "level": 5,
+                "type": "Stat",
+                "name": "Défense",
+                "amount": 4
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Terrestre",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 4000
+            },
+            {
+                "level": 20,
+                "type": "Exp",
+                "name": "Mineur",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Surt",
+        "level": 12,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 2000
+            },
+            {
+                "level": 5,
+                "type": "Vente",
+                "name": "de Chairs putréfiées",
+                "amount": 25
+            },
+            {
+                "level": 10,
+                "type": "BuffSpecial",
+                "name": "de chance d'enflammer les ennemis",
+                "amount": 10
+            },
+            {
+                "level": 15,
+                "type": "Exp",
+                "name": "Mineur",
+                "amount": 2.5
+            },
+            {
+                "level": 20,
+                "type": "BuffSpecial",
+                "name": "Célérité",
+                "amount": 1
+            }
+        ]
+    },
+    {
+        "name": "Knity",
+        "level": 15,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Stat",
+                "name": "Régénération",
+                "amount": 8
+            },
+            {
+                "level": 5,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 7500
+            },
+            {
+                "level": 10,
+                "type": "Exp",
+                "name": "Pêcheur",
+                "amount": 10
+            },
+            {
+                "level": 15,
+                "type": "BuffSpecial",
+                "name": "de dégâts aux monstres Vanilla",
+                "amount": 100
+            },
+            {
+                "level": 20,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 10000
+            }
+        ]
+    },
+    {
+        "name": "Knity",
+        "level": 15,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Stat",
+                "name": "Régénération",
+                "amount": 8
+            },
+            {
+                "level": 5,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 7500
+            },
+            {
+                "level": 10,
+                "type": "Exp",
+                "name": "Pêcheur",
+                "amount": 10
+            },
+            {
+                "level": 15,
+                "type": "BuffSpecial",
+                "name": "de dégâts aux monstres Vanilla",
+                "amount": 100
+            },
+            {
+                "level": 20,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 10000
+            }
+        ]
+    },
+    {
+        "name": "Viserion",
+        "level": 10,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Stat",
+                "name": "Vie",
+                "amount": 7
+            },
+            {
+                "level": 5,
+                "type": "Stat",
+                "name": "Mana",
+                "amount": 20
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Aérienne",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Exp",
+                "name": "Pêcheur",
+                "amount": 5
+            },
+            {
+                "level": 20,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 4000
+            }
+        ]
+    },
+    {
+        "name": "Viserion",
+        "level": 10,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Stat",
+                "name": "Vie",
+                "amount": 7
+            },
+            {
+                "level": 5,
+                "type": "Stat",
+                "name": "Mana",
+                "amount": 20
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Aérienne",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Exp",
+                "name": "Pêcheur",
+                "amount": 5
+            },
+            {
+                "level": 20,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 4000
+            }
+        ]
+    },
+    {
+        "name": "Nayru",
+        "level": 10,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 6500
+            },
+            {
+                "level": 5,
+                "type": "Exp",
+                "name": "Bûcheron",
+                "amount": 7.5
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Aérienne",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Résistance",
+                "name": "-100% de dégâts de chute",
+                "amount": 0
+            },
+            {
+                "level": 20,
+                "type": "Vente",
+                "name": "chez Jimmy",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Nayru",
+        "level": 10,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 6500
+            },
+            {
+                "level": 5,
+                "type": "Exp",
+                "name": "Bûcheron",
+                "amount": 7.5
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Aérienne",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Résistance",
+                "name": "-100% de dégâts de chute",
+                "amount": 0
+            },
+            {
+                "level": 20,
+                "type": "Vente",
+                "name": "chez Jimmy",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Nayru",
+        "level": 5,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 6500
+            },
+            {
+                "level": 5,
+                "type": "Exp",
+                "name": "Bûcheron",
+                "amount": 7.5
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Aérienne",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Résistance",
+                "name": "-100% de dégâts de chute",
+                "amount": 0
+            },
+            {
+                "level": 20,
+                "type": "Vente",
+                "name": "chez Jimmy",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Bilbon Sacquet",
+        "level": 1,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Vente",
+                "name": "de Roches",
+                "amount": 10
+            },
+            {
+                "level": 5,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 3500
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Aérienne",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "BuffSpecial",
+                "name": "Célérité",
+                "amount": 1
+            },
+            {
+                "level": 20,
+                "type": "Exp",
+                "name": "Fermier",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Doggo",
+        "level": 12,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Résistance",
+                "name": "-100% de faim",
+                "amount": 0
+            },
+            {
+                "level": 5,
+                "type": "Stat",
+                "name": "Dégâts Critiques",
+                "amount": 9
+            },
+            {
+                "level": 10,
+                "type": "Exp",
+                "name": "Forgemage",
+                "amount": 10
+            },
+            {
+                "level": 15,
+                "type": "Stat",
+                "name": "Chance de Critique",
+                "amount": 2
+            },
+            {
+                "level": 20,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 10000
+            }
+        ]
+    },
+    {
+        "name": "Doggo",
+        "level": 1,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Résistance",
+                "name": "-100% de faim",
+                "amount": 0
+            },
+            {
+                "level": 5,
+                "type": "Stat",
+                "name": "Dégâts Critiques",
+                "amount": 9
+            },
+            {
+                "level": 10,
+                "type": "Exp",
+                "name": "Forgemage",
+                "amount": 10
+            },
+            {
+                "level": 15,
+                "type": "Stat",
+                "name": "Chance de Critique",
+                "amount": 2
+            },
+            {
+                "level": 20,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 10000
+            }
+        ]
+    },
+    {
+        "name": "Skog",
+        "level": 1,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Vente",
+                "name": "de Bûches de chêne",
+                "amount": 20
+            },
+            {
+                "level": 5,
+                "type": "Stat",
+                "name": "Défense",
+                "amount": 11
+            },
+            {
+                "level": 10,
+                "type": "Exp",
+                "name": "Minecraft",
+                "amount": 7.5
+            },
+            {
+                "level": 15,
+                "type": "Stat",
+                "name": "Régénération",
+                "amount": 5
+            },
+            {
+                "level": 20,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 3500
+            }
+        ]
+    },
+    {
+        "name": "Yukio",
+        "level": 5,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 5000
+            },
+            {
+                "level": 5,
+                "type": "Stat",
+                "name": "Dextérité",
+                "amount": 7
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Aérienne",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Stat",
+                "name": "Mana",
+                "amount": 70
+            },
+            {
+                "level": 20,
+                "type": "Vente",
+                "name": "de Glace",
+                "amount": 10
+            }
+        ]
+    },
+    {
+        "name": "Shira",
+        "level": 15,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Vente",
+                "name": "de Bûches d'acacia",
+                "amount": 10
+            },
+            {
+                "level": 5,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 2500
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Terrestre",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Exp",
+                "name": "Chasseur",
+                "amount": 5
+            },
+            {
+                "level": 20,
+                "type": "Stat",
+                "name": "Dextérité",
+                "amount": 2
+            }
+        ]
+    },
+    {
+        "name": "Shira",
+        "level": 1,
+        "effects": [
+            {
+                "level": 1,
+                "type": "Vente",
+                "name": "de Bûches d'acacia",
+                "amount": 10
+            },
+            {
+                "level": 5,
+                "type": "Argent",
+                "name": "$/h",
+                "amount": 2500
+            },
+            {
+                "level": 10,
+                "type": "Monture",
+                "name": "Terrestre",
+                "amount": 0
+            },
+            {
+                "level": 15,
+                "type": "Exp",
+                "name": "Chasseur",
+                "amount": 5
+            },
+            {
+                "level": 20,
+                "type": "Stat",
+                "name": "Dextérité",
+                "amount": 2
+            }
+        ]
     }
 ]

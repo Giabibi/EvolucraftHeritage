@@ -1,6 +1,7 @@
 import Discord from "discord.js";
 import path from "path";
 import { ClientWithCommands, Command } from "../types/discord";
+import { convertDateToString } from "../utils/convert";
 
 export default async (
     bot: ClientWithCommands,
@@ -19,8 +20,12 @@ export default async (
         const commandModule = await import(
             path.join(commandsPath, interaction.commandName)
         );
-        const command: Command = commandModule.default;
-        command.run(bot, interaction, command.options);
+        const command: Command = commandModule.default; 
+        try {
+            command.run(bot, interaction, command.options);
+        } catch (e) {
+            console.error(`[${command.name}][${convertDateToString(new Date(Date.now()), "yyyy-MM-dd hh:mm")}] Error:\n`, e)
+        }
     }
     if (
         interaction.type ===
