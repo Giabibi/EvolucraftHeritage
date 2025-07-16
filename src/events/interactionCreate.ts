@@ -3,7 +3,7 @@ import path from "path";
 import { ClientWithCommands, Command } from "../types/discord";
 import { convertDateToString } from "../utils/convert";
 
-const authorizedGuildsIds: string[] = ["707715843018195035"];
+const authorizedGuildsIds: string[] = ["707715843018195035", "1305949332331036752"];
 
 export default async (
     bot: ClientWithCommands,
